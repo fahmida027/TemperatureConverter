@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: rgba(13, 107, 178, 0.816);
+            background-color: rgba(0, 0, 0, 0.816);
             box-sizing: content-box;
             margin: 0;
             padding: 0;
@@ -47,14 +47,81 @@
         input:focus {
             box-shadow: 0px 0px 10px black;
         }
-        
+
+        .in {
+            padding: none;
+            width: 95%;
+            height: 15px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+    
+        }
+
+        .parallax {
+            
+            background-image: url("assets/images/temperature-converter.webp");
+
+           
+            min-height: 500px; 
+
+            
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax1 {
+            
+            background-image: url("assets/images/IF-A-COLD-WAR-TURNS-HOT.jpg");
+
+           
+            min-height: 800px; 
+
+            
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .para1 {
+            border: 2px solid #fafbfd;
+            padding: 15px;
+            border-radius: 8px;
+            width: 95%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: left;
+    
+        }
+
+        .para1 ul {
+            padding-left: 20px;
+        }
+        .para1 strong {
+            color: #d9534f;
+        }
+            
+                    
     </style>
 </head>
 <body>
     <div id="container">Live Temperature Converter</div>
+
+    <div class="parallax"></div>
+
+    <div class = "in">
+        <p style="font-size: larger; font-style: italic;">
+            Input some temperature.
+        </p>
     <input type="number" id="celsius" placeholder="Celsius" oninput="cel()">
     <input type="number" id="fahrenheit" placeholder="Fahrenheit" oninput="fah()">
     <input type="number" id="kelvin" placeholder="Kelvin" oninput="kel()">
+    </div>
 
     <script>
 
@@ -100,5 +167,25 @@
             }
         }
     </script>
+
+<div class="parallax"></div>
+
+<div class="para1">
+    <p>
+        The three most common temperature scales are <strong>Celsius (°C)</strong>, <strong>Fahrenheit (°F)</strong>, and <strong>Kelvin (K)</strong>. Celsius is widely used in most countries and in scientific calculations, while Fahrenheit is primarily used in the United States. Kelvin is the SI unit of temperature and is commonly used in scientific fields.
+    </p>
+    <p>
+        Temperature conversions between these scales are as follows:
+    </p>
+    <ul>
+        <li><strong>Celsius to Fahrenheit:</strong> (°C × 9/5) + 32 = °F</li>
+        <li><strong>Fahrenheit to Celsius:</strong> (°F - 32) × 5/9 = °C</li>
+        <li><strong>Celsius to Kelvin:</strong> °C + 273.15 = K</li>
+        <li><strong>Kelvin to Celsius:</strong> K - 273.15 = °C</li>
+        <li><strong>Fahrenheit to Kelvin:</strong> (°F - 32) × 5/9 + 273.15 = K</li>
+        <li><strong>Kelvin to Fahrenheit:</strong> (K - 273.15) × 9/5 + 32 = °F</li>
+    </ul>
+</div>
+<div class="parallax1"></div>
 </body>
 </html>
